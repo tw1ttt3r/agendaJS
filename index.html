@@ -6,23 +6,64 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
     </head>
+    <style>
+        nav {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+        }
+        input {
+            margin: 10px;
+        }
+        #guardar {
+            height: 50px;
+            margin-left: 5px; 
+        }
+        h3 {
+            color: red;
+        }
+        h1{
+            margin: 20px;
+        }
+        img{
+            height: 50px;
+            width: 50px;
+            margin: 10px;
+        }
+    </style>
     <body>
         <nav>
             <section class="botonera"></section>
             <section>
-                <input type="text" id="cadenaBusqueda">
+                <input type="text" id="cadenaBusqueda" placeholder="Busqueda por nombre">
                 <button onclick="busquedaInput()">Buscar</button>
             </section>
         </nav>
         <section>
-            <input type="text" id="nombre">
-            <input type="text" id="apellido">
-            <input type="text" id="cel">
-            <input type="text" id="casa">
-            <input type="text" id="correo">
-            <input type="text" id="alias">
-            <textarea id="img" cols="30" rows="10"></textarea>
-            <button id="guardar">Guardar Contacto</button>
+            <div>
+                <h3>*</h3><h4>Nombre:</h4><input type="text" id="nombre" placeholder="Nombre">
+                <h3>*</h3><h4>Apellido:</h4><input type="text" id="apellido" placeholder="Apellido">
+            </div>
+            <div>
+                <h4>Celular:</h4><input type="text" id="cel" placeholder="Celular">
+                <h4>Tel casa:</h4><input type="text" id="casa" placeholder="Tel Casa">
+                <h3>*</h3><h4>Email:</h4><input type="text" id="correo" placeholder="Email">
+                <h4>Alias:</h4><input type="text" id="alias" placeholder="Alias">
+            </div>
+            <div>
+                <textarea id="img" cols="40" rows="3" placeholder="URL imagen"></textarea>
+                <button id="guardar">Guardar Contacto</button>
+            </div>
         </section>
         <section id="contactos"></section>
         <script src="utils.js"></script>
